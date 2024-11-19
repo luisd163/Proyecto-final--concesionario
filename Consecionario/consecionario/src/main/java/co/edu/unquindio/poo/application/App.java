@@ -28,7 +28,7 @@ public class App extends Application {
     private Stage primaryStage;
     private PaginaPrincipalViewController paginaPrincipalViewController;
     Empresa empresa = new Empresa("TuCarroUQ", "XLR8");
-    // Prueba de commit
+    
     
     public Empresa getEmpresa() {
         return empresa;
