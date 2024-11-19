@@ -111,6 +111,9 @@ public class EmpresaTest {
         Cliente cliente = new Cliente(null, "5678", null, null);
         Vehiculo vehiculo = new Moto(null, null, null, null, null, null, null, "1234", null, null);
         Alquiler alquiler = new Alquiler("1234", "5678", "123", null, null, "1234");
+        empresa.crearEmpleado(empleado);
+        empresa.crearCliente(cliente);
+        empresa.crearVehiculo(vehiculo);
 
         assertTrue(empresa.crearAlquiler(alquiler));
     }
@@ -123,6 +126,9 @@ public class EmpresaTest {
         Cliente cliente = new Cliente(null, "5678", null, null);
         Vehiculo vehiculo = new Moto(null, null, null, null, null, null, null, "123", null, null);
         Alquiler alquiler = new Alquiler("1234", "5678", "321", null, null, "123");
+        empresa.crearEmpleado(empleado);
+        empresa.crearCliente(cliente);
+        empresa.crearVehiculo(vehiculo);
         empresa.crearAlquiler(alquiler);
 
         assertTrue(empresa.eliminarAlquiler(alquiler));
@@ -139,10 +145,10 @@ public class EmpresaTest {
         Cliente cliente = new Cliente(null, "5678", null, null);
         Vehiculo vehiculo = new Moto(null, null, null, null, null, null, null, "123", null, null);
         Alquiler alquiler = new Alquiler("123", "5678", "123", null, null, "123");
-        empresa.crearAlquiler(alquiler);
         empresa.crearEmpleado(empleado);
         empresa.crearCliente(cliente);
         empresa.crearVehiculo(vehiculo);
+        empresa.crearAlquiler(alquiler);
 
         Empleado empleado2 = new Empleado(null, "321", null, null, null, null);
         Cliente cliente2 = new Cliente(null, "123", null, null);
@@ -211,7 +217,7 @@ public class EmpresaTest {
         empresa.crearEmpleado(empleado);
         empresa.crearCliente(cliente);
         empresa.crearVehiculo(vehiculo);
-        Compra compra = new Compra("123", "123", "5678", "123");
+        Compra compra = new Compra("123", "5678", "123", "123");
 
         assertTrue(empresa.crearCompra(compra));
     }
@@ -225,7 +231,7 @@ public class EmpresaTest {
         empresa.crearEmpleado(empleado);
         empresa.crearCliente(cliente);
         empresa.crearVehiculo(vehiculo);
-        Compra compra = new Compra("123", "123", "5678", "123");
+        Compra compra = new Compra("123", "5678", "123", "123");
         empresa.crearCompra(compra);
 
         assertTrue(empresa.eliminarCompra(compra));

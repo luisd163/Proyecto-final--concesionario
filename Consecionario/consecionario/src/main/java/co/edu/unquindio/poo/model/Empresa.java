@@ -442,34 +442,57 @@ public class Empresa {
 
                     // Actualizo el alquiler en la lista de alquileres del empleado
                     Empleado empleado = identificarEmpleado(idEmpleado);
-                    if (empleado != null) {
-                        LinkedList<Alquiler> listaAlquileresEmpleado = empleado.getListaAlquileres();
-                        for (Alquiler alquilerEmpleado : listaAlquileresEmpleado) {
-                            if (alquilerEmpleado != null) {
-                                if (alquilerEmpleado.getCodigoAlquiler().equals(codigoAlquiler)) {
-                                    alquilerEmpleado.setCodigoAlquiler(codigoAlquiler);
-                                    alquilerEmpleado.setIdCliente(idCliente);
-                                    alquilerEmpleado.setIdEmpleado(idEmpleado);
-                                    alquilerEmpleado.setFechaPrestamo(fechaPrestamo);
-                                    alquilerEmpleado.setFechaDevolucion(fechaDevolucion);
-                                    alquilerEmpleado.setMatriculaVehiculo(matriculaVehiculo);
-
-                                    // Actualizo el alquiler en el cliente
-                                    Cliente cliente = identificarCliente(idCliente);
-                                    if (cliente != null) {
-                                        cliente.setAlquiler(alquiler);
-                                    }
-
-                                    // Actualizo el alquiler en el vehiculo
-                                    Vehiculo vehiculo = identificarVehiculo(matriculaVehiculo);
-                                    if (vehiculo != null) {
-                                        vehiculo.setAlquiler(alquiler);
-                                    }
-                                    return true;
-                                }
+                    if (empleado == null) {
+                        return false;
+                    }
+                    LinkedList<Alquiler> listaAlquileresEmpleado = empleado.getListaAlquileres();
+                    for (Alquiler alquilerEmpleado : listaAlquileresEmpleado) {
+                        if (alquilerEmpleado != null) {
+                            if (alquilerEmpleado.getCodigoAlquiler().equals(codigoAlquiler)) {
+                                alquilerEmpleado.setCodigoAlquiler(codigoAlquiler);
+                                alquilerEmpleado.setIdCliente(idCliente);
+                                alquilerEmpleado.setIdEmpleado(idEmpleado);
+                                alquilerEmpleado.setFechaPrestamo(fechaPrestamo);
+                                alquilerEmpleado.setFechaDevolucion(fechaDevolucion);
+                                alquilerEmpleado.setMatriculaVehiculo(matriculaVehiculo);
                             }
                         }
                     }
+
+                    // Actualizo el alquiler en la lista de alquileres del cliente
+                    Cliente cliente = identificarCliente(idCliente);
+                    if (cliente == null) {
+                        return false;
+                    }
+                    if (cliente.getAlquiler() != null) {
+                        Alquiler alquilerCliente = cliente.getAlquiler();
+                        if (alquilerCliente.getCodigoAlquiler().equals(codigoAlquiler)) {
+                            alquilerCliente.setCodigoAlquiler(codigoAlquiler);
+                            alquilerCliente.setIdCliente(idCliente);
+                            alquilerCliente.setIdEmpleado(idEmpleado);
+                            alquilerCliente.setFechaPrestamo(fechaPrestamo);
+                            alquilerCliente.setFechaDevolucion(fechaDevolucion);
+                            alquilerCliente.setMatriculaVehiculo(matriculaVehiculo);
+                        }
+                    }
+
+                    // Actualizo el alquiler en la lista de alquileres del vehiculo
+                    Vehiculo vehiculo = identificarVehiculo(matriculaVehiculo);
+                    if (vehiculo == null) {
+                        return false;
+                    }
+                    if (vehiculo.getAlquiler() != null) {
+                        Alquiler alquilerVehiculo = vehiculo.getAlquiler();
+                        if (alquilerVehiculo.getCodigoAlquiler().equals(codigoAlquiler)) {
+                            alquilerVehiculo.setCodigoAlquiler(codigoAlquiler);
+                            alquilerVehiculo.setIdCliente(idCliente);
+                            alquilerVehiculo.setIdEmpleado(idEmpleado);
+                            alquilerVehiculo.setFechaPrestamo(fechaPrestamo);
+                            alquilerVehiculo.setFechaDevolucion(fechaDevolucion);
+                            alquilerVehiculo.setMatriculaVehiculo(matriculaVehiculo);
+                        }
+                    }
+                    return true;
                 }
             }
         }
