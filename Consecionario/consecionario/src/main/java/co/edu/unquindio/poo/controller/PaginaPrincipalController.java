@@ -14,11 +14,7 @@ public class PaginaPrincipalController {
 
     Empresa empresa;
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
-
-    public PaginaPrincipalController() {
+    public PaginaPrincipalController(Empresa empresa) {
         this.empresa = empresa;
     }
 

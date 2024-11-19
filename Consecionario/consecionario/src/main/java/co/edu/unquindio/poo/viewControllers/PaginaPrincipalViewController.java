@@ -45,12 +45,7 @@ public class PaginaPrincipalViewController {
         
         public void setApp(App app) {
                 this.app = app;
-                paginaPrincipalController = new PaginaPrincipalController();
-                paginaPrincipalController.setEmpresa(app.getEmpresa());
-                VehiculosTabla = app.getEmpresa().obtenerListaVehiculosEmpresa();
-                clientesTabla = app.getEmpresa().obtenerListaClientesEmpresa();
-                empleadosTabla = app.getEmpresa().obtenerListaEmpleadosEmpresa();
-                alquileresTabla = app.getEmpresa().obtenerListaAlquileresEmpresa();
+                paginaPrincipalController = new PaginaPrincipalController(app.getEmpresa());
                 obtenerVehiculos();
                 initBinding();
         }
