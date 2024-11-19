@@ -28,8 +28,7 @@ public class App extends Application {
     private Stage primaryStage;
     private PaginaPrincipalViewController paginaPrincipalViewController;
     Empresa empresa = new Empresa("TuCarroUQ", "XLR8");
-    
-    
+
     public Empresa getEmpresa() {
         return empresa;
     }
@@ -41,8 +40,6 @@ public class App extends Application {
         empresa.inicializarDatos();
         openViewLogin();
     }
-
-
 
     public void openViewLogin() {
         try {
@@ -127,7 +124,6 @@ public class App extends Application {
         }
     }
 
-    
     public void openViewCrearCamion() {
         try {
             FXMLLoader loader = new FXMLLoader();
