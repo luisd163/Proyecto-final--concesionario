@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unquindio.poo.viewControllers.CrearPickUpViewController">
+   <children>
+      <Label layoutX="203.0" layoutY="14.0" text="Crear Pick up">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="22.0" layoutY="64.0" prefHeight="4.0" prefWidth="537.0" />
+      <Label layoutX="22.0" layoutY="79.0" opacity="0.5" text="Tipo de transmisión" />
+      <ComboBox fx:id="comboTipoTransmision" layoutX="22.0" layoutY="100.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="139.0" opacity="0.5" text="Marca" />
+      <TextField fx:id="txtMarca" layoutX="22.0" layoutY="160.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="199.0" opacity="0.5" text="Nuevo o usado" />
+      <TextField fx:id="txtNuevoOUsado" layoutX="22.0" layoutY="220.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="261.0" opacity="0.5" text="Modelo" />
+      <TextField fx:id="txtModelo" layoutX="22.0" layoutY="282.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="320.0" opacity="0.5" text="Cambios" />
+      <TextField fx:id="txtCambios" layoutX="22.0" layoutY="341.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="412.0" layoutY="79.0" opacity="0.5" text="Velocidad máxima" />
+      <TextField fx:id="txtVelocidadMaxima" layoutX="412.0" layoutY="100.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="412.0" layoutY="139.0" opacity="0.5" text="Cilindraje" />
+      <TextField fx:id="txtCilindraje" layoutX="412.0" layoutY="160.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="412.0" layoutY="199.0" opacity="0.5" text="Matricula" />
+      <TextField fx:id="txtMatricula" layoutX="412.0" layoutY="220.0" prefHeight="31.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboTipoVehiculo" layoutX="221.0" layoutY="100.0" prefWidth="150.0" />
+      <Label layoutX="221.0" layoutY="79.0" opacity="0.5" text="Tipo de vehiculo" />
+      <Label layoutX="221.0" layoutY="139.0" opacity="0.5" text="Numero de pasajeros" />
+      <TextField fx:id="txtNumeroPasajeros" layoutX="221.0" layoutY="160.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtNumeroPuertas" layoutX="221.0" layoutY="220.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtCapacidadDeCarga" layoutX="221.0" layoutY="341.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtNumeroBolsasAire" layoutX="221.0" layoutY="282.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtAireAcondicionado" layoutX="412.0" layoutY="282.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtCamaraDeReversa" layoutX="412.0" layoutY="341.0" prefHeight="31.0" prefWidth="150.0" />
+      <TextField fx:id="txtAbs" layoutX="316.0" layoutY="410.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="221.0" layoutY="199.0" opacity="0.5" text="Numero de puertas" />
+      <Label layoutX="211.0" layoutY="261.0" opacity="0.5" text="Numero de bolsas de aire" />
+      <Label layoutX="221.0" layoutY="318.0" opacity="0.5" text="Capacidad caja de carga" />
+      <Label layoutX="412.0" layoutY="261.0" opacity="0.5" text="Aire acondicionado" />
+      <Label layoutX="412.0" layoutY="320.0" opacity="0.5" text="Camara de reversa" />
+      <Label layoutX="377.0" layoutY="389.0" opacity="0.5" text="ABS" />
+      <Label layoutX="190.0" layoutY="389.0" opacity="0.5" text="4x4" />
+      <TextField fx:id="txt4x4" layoutX="127.0" layoutY="410.0" prefHeight="31.0" prefWidth="150.0" />
+      <Separator layoutX="26.0" layoutY="457.0" prefHeight="4.0" prefWidth="537.0" />
+      <Button fx:id="btnCrearVehiculo" layoutX="222.0" layoutY="477.0" mnemonicParsing="false" onAction="#crearVehiculoAction" prefHeight="31.0" prefWidth="150.0" text="Crear" />
+      <Button fx:id="btnActualizarVehiculo" layoutX="398.0" layoutY="477.0" mnemonicParsing="false" onAction="#actualizarVehiculoAction" prefHeight="31.0" prefWidth="150.0" text="Actualizar" />
+      <Button fx:id="btnEliminarVehiculo" layoutX="43.0" layoutY="477.0" mnemonicParsing="false" onAction="#eliminarVehiculoAction" prefHeight="31.0" prefWidth="150.0" text="Eliminar" />
+      <Button fx:id="btnLimpiarCampos" layoutX="222.0" layoutY="522.0" mnemonicParsing="false" onAction="#limpiarCamposAction" prefHeight="31.0" prefWidth="150.0" text="Limpiar campos" />
+      <Button fx:id="btnVolverAction" layoutX="222.0" layoutY="567.0" mnemonicParsing="false" onAction="#volverAction" prefHeight="31.0" prefWidth="150.0" text="Volver" />
+   </children>
+</AnchorPane>

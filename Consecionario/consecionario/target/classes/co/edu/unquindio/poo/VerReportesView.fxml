@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unquindio.poo.viewControllers.VerReportesViewController">
+   <children>
+      <Label layoutX="366.0" layoutY="14.0" text="Ver reportes empleado">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableListaVentas" layoutX="28.0" layoutY="287.0" prefHeight="292.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="columnCodigoVenta" prefWidth="127.0" text="Código de venta" />
+          <TableColumn fx:id="columnIdClienteVenta" prefWidth="165.0" text="Id cliente" />
+            <TableColumn fx:id="columnMatriculaVehiculoVenta" prefWidth="166.0" text="Matricula del vehiculo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtdEmpleado" layoutX="432.0" layoutY="110.0" promptText="Id empleado" />
+      <TableView fx:id="tableListaCompras" layoutX="560.0" layoutY="287.0" prefHeight="292.0" prefWidth="459.0">
+         <columns>
+            <TableColumn fx:id="columnCodigoCompra" prefWidth="127.0" text="Código de compra" />
+            <TableColumn fx:id="columnIdClienteCompra" prefWidth="165.0" text="Id cliente" />
+            <TableColumn fx:id="columnMatriculaVehiculoCompra" prefWidth="166.0" text="Matricula del vehiculo" />
+         </columns>
+      </TableView>
+      <Label layoutX="691.0" layoutY="262.0" text="Lista compras empleado">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="262.0" text="Lista ventas empleado">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGenerarReporte" layoutX="339.0" layoutY="186.0" mnemonicParsing="false" onAction="#generarReporteAction" prefHeight="31.0" prefWidth="155.0" text="Generar reporte" />
+      <Separator layoutX="28.0" layoutY="68.0" prefHeight="1.0" prefWidth="991.0" />
+      <Button fx:id="btnVolver" layoutX="542.0" layoutY="186.0" mnemonicParsing="false" onAction="#volverAction" prefHeight="31.0" prefWidth="155.0" text="Volver" />
+   </children>
+</AnchorPane>

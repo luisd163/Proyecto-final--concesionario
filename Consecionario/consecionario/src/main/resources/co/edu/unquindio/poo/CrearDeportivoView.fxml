@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unquindio.poo.viewControllers.CrearDeportivoViewController">
+   <children>
+      <Label layoutX="85.0" layoutY="14.0" text="Crear Deportivo">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="22.0" layoutY="62.0" prefHeight="2.0" prefWidth="346.0" />
+      <Label layoutX="22.0" layoutY="73.0" opacity="0.5" text="Tipo de transmisión" />
+      <ComboBox fx:id="comboTipoTransmision" layoutX="22.0" layoutY="94.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="137.0" opacity="0.5" text="Marca" />
+      <TextField fx:id="txtMarca" layoutX="22.0" layoutY="158.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="199.0" opacity="0.5" text="Nuevo o usado" />
+      <TextField fx:id="txtNuevoOUsado" layoutX="22.0" layoutY="220.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="261.0" opacity="0.5" text="Modelo" />
+      <TextField fx:id="txtModelo" layoutX="22.0" layoutY="282.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="322.0" opacity="0.5" text="Cambios" />
+      <TextField fx:id="txtCambios" layoutX="22.0" layoutY="343.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="383.0" opacity="0.5" text="Velocidad máxima" />
+      <TextField fx:id="txtVelocidadMaxima" layoutX="22.0" layoutY="404.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="27.0" layoutY="445.0" opacity="0.5" text="Cilindraje" />
+      <TextField fx:id="txtCilindraje" layoutX="22.0" layoutY="466.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="218.0" layoutY="73.0" opacity="0.5" text="Matricula" />
+      <TextField fx:id="txtMatricula" layoutX="218.0" layoutY="94.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="215.0" layoutY="137.0" opacity="0.5" text="Tipo de vehiculo" />
+      <ComboBox fx:id="comboTipoVehiculo" layoutX="218.0" layoutY="158.0" prefWidth="150.0" />
+      <Label layoutX="218.0" layoutY="199.0" opacity="0.5" text="Numero de pasajeros" />
+      <TextField fx:id="txtNumeroPasajeros" layoutX="218.0" layoutY="220.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="218.0" layoutY="261.0" opacity="0.5" text="Numero de puertas" />
+      <TextField fx:id="txtNumeroPuertas" layoutX="218.0" layoutY="282.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="215.0" layoutY="322.0" opacity="0.5" text=" Numero de bolsas de aire" />
+      <TextField fx:id="txtNumeroBolsasDeAire" layoutX="218.0" layoutY="343.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="220.0" layoutY="383.0" opacity="0.5" text="Caballos de fuerza" />
+      <TextField fx:id="txtCaballosDeFuerza" layoutX="218.0" layoutY="404.0" prefHeight="31.0" prefWidth="150.0" />
+      <Label layoutX="219.0" layoutY="445.0" opacity="0.5" text="De 0 a 100 " />
+      <TextField fx:id="txtDe0A100" layoutX="218.0" layoutY="466.0" prefHeight="31.0" prefWidth="150.0" />
+      <Separator layoutX="22.0" layoutY="516.0" prefHeight="2.0" prefWidth="346.0" />
+      <Button fx:id="btnCrearVehiculo" layoutX="145.0" layoutY="531.0" mnemonicParsing="false" onAction="#crearVehiculoAction" prefHeight="31.0" prefWidth="101.0" text="Crear" />
+      <Button fx:id="btnActualizarVehiculo" layoutX="259.0" layoutY="531.0" mnemonicParsing="false" onAction="#actualizarVehiculoAction" prefHeight="31.0" prefWidth="101.0" text="Actualizar" />
+      <Button fx:id="btnEliminarVehiculo" layoutX="30.0" layoutY="531.0" mnemonicParsing="false" onAction="#eliminarVehiculoAction" prefHeight="31.0" prefWidth="101.0" text="Eliminar" />
+      <Button fx:id="btnLimpiarCampos" layoutX="120.0" layoutY="575.0" mnemonicParsing="false" onAction="#limpiarCamposAction" prefHeight="31.0" prefWidth="150.0" text="Limpiar campos" />
+      <Button fx:id="btnVolver" layoutX="135.0" layoutY="618.0" mnemonicParsing="false" onAction="#volverAction" prefHeight="31.0" prefWidth="122.0" text="Volver" />
+   </children>
+</AnchorPane>

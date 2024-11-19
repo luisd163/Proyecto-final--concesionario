@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unquindio.poo.viewControllers.OlvidasteLaContraseniaViewController">
+   <children>
+      <Label layoutX="48.0" layoutY="29.0" text="¿Olvidaste la contraseña?" textFill="#0095ff">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font></Label>
+      <Separator layoutX="19.0" layoutY="86.0" prefHeight="4.0" prefWidth="381.0" />
+      <Label layoutX="118.0" layoutY="115.0" opacity="0.55" text="Ingresa con la palabra clave" />
+      <TextField fx:id="txtPalabraClave" layoutX="116.0" layoutY="150.0" />
+      <Separator layoutX="25.0" layoutY="222.0" prefHeight="4.0" prefWidth="381.0" />
+      <Button fx:id="btnIniciarSesion" layoutX="230.0" layoutY="263.0" mnemonicParsing="false" onAction="#iniciarSesionAction" text="Iniciar Sesion" />
+      <Button fx:id="btnVolver" layoutX="87.0" layoutY="263.0" mnemonicParsing="false" onAction="#volverAction" prefHeight="31.0" prefWidth="107.0" text="Volver " />
+   </children>
+</AnchorPane>

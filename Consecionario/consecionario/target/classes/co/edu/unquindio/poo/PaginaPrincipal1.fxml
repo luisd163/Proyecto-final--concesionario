@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1134.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unquindio.poo.viewControllers.PaginaPrincipalViewController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="48.0" prefHeight="627.0" prefWidth="1121.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Vehiculos">
+               <content>
+                  <AnchorPane prefHeight="558.0" prefWidth="1121.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" prefHeight="32.0" prefWidth="324.0" text="Seleccione el tipo de vehiculo a crear:">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnMoto" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#abrirVentanaMotoAction" prefHeight="31.0" prefWidth="240.0" text="Moto" />
+                        <Button fx:id="btnDeportivo" layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onAction="#abrirVentanaDeportivoAction" prefHeight="31.0" prefWidth="240.0" text="Deportivo" />
+                        <Button fx:id="btnBus" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#abrirVentanaBusAction" prefHeight="31.0" prefWidth="240.0" text="Bus" />
+                        <Button fx:id="btnPickUp" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#abrirVentanaPickUpAction" prefHeight="31.0" prefWidth="240.0" text="Pick Up" />
+                        <TableView fx:id="tableListaVehiculos" layoutX="16.0" layoutY="276.0" prefHeight="287.0" prefWidth="1089.0">
+                          <columns>
+                            <TableColumn fx:id="columnMarca" prefWidth="102.0" text="Marca" />
+                            <TableColumn fx:id="columnNuevoOUsado" prefWidth="136.0" text="Nuevo o Usado" />
+                              <TableColumn fx:id="columnModelo" prefWidth="94.0" text="Modelo" />
+                              <TableColumn fx:id="columnCambios" prefWidth="91.0" text="Cambios" />
+                              <TableColumn fx:id="columnVelocidadMaxima" prefWidth="139.0" text="Velocidad Maxima" />
+                              <TableColumn fx:id="columnCilindraje" prefWidth="137.0" text="Cilindraje" />
+                              <TableColumn fx:id="columnMatricula" prefWidth="97.0" text="Matricula" />
+                              <TableColumn fx:id="columnTipoDeTransmision" prefWidth="155.0" text="Tipo de Transmisión" />
+                              <TableColumn fx:id="columnTipoDeVehiculo" prefWidth="137.0" text="Tipo de Vehiculo" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnSedan" layoutX="338.0" layoutY="77.0" mnemonicParsing="false" onAction="#abrirVentanaSedanAction" prefHeight="31.0" prefWidth="240.0" text="Sedán" />
+                        <Button fx:id="btnCamioneta" layoutX="338.0" layoutY="121.0" mnemonicParsing="false" onAction="#abrirVentanaCamionetaAction" prefHeight="31.0" prefWidth="240.0" text="Camioneta" />
+                        <Button fx:id="btnVan" layoutX="338.0" layoutY="166.0" mnemonicParsing="false" onAction="#abrirVentanaVanAction" prefHeight="31.0" prefWidth="240.0" text="Van" />
+                        <Button fx:id="btnCamion" layoutX="338.0" layoutY="212.0" mnemonicParsing="false" onAction="#abrirVentanaCamionAction" prefHeight="31.0" prefWidth="240.0" text="Camión" />
+                        <ImageView fitHeight="203.0" fitWidth="199.0" layoutX="751.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../minimalist%20logo%20for%20Tu%20Carro%20UQ%20with%20the%20letters%20UQ.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Alquiler">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" opacity="0.5" text="Identificación del cliente" />
+                        <TextField fx:id="txtIdentificacionClienteAlquiler" layoutX="14.0" layoutY="55.0" />
+                        <Label layoutX="14.0" layoutY="101.0" opacity="0.5" text="Identificacion del empleado" />
+                        <TextField fx:id="txtIdentificacionEmpleadoAlquiler" layoutX="14.0" layoutY="129.0" />
+                        <Label layoutX="14.0" layoutY="173.0" opacity="0.5" text="Matricula del vehiculo" />
+                        <TextField fx:id="txtMatriculaVehiculoAlquiler" layoutX="13.0" layoutY="203.0" />
+                        <Label layoutX="14.0" layoutY="248.0" opacity="0.5" text="Fecha de prestamo" />
+                        <TextField fx:id="txtFechaPrestamoAlquiler" layoutX="13.0" layoutY="279.0" />
+                        <Label layoutX="14.0" layoutY="328.0" opacity="0.5" text="Fecha de devolución" />
+                        <TextField fx:id="txtFechaDevolucionAlquiler" layoutX="14.0" layoutY="355.0" />
+                        <Button fx:id="btnCrearAlquiler" layoutX="15.0" layoutY="469.0" mnemonicParsing="false" onAction="#crearAlquilerAction" prefHeight="31.0" prefWidth="186.0" text="Crear alquiler" />
+                        <TableView fx:id="tableListaAlquileres" layoutX="250.0" layoutY="83.0" prefHeight="393.0" prefWidth="837.0">
+                          <columns>
+                            <TableColumn fx:id="columnIdClienteAlquiler" prefWidth="99.0" text="Id del cliente" />
+                            <TableColumn fx:id="columnIdEmpleadoAlquiler" prefWidth="125.0" text="Id del empleado" />
+                              <TableColumn fx:id="columnMatriculaVehiculoAlquiler" prefWidth="166.0" text="Matricula del vehiculo" />
+                              <TableColumn fx:id="columnFechaPrestamoAlquiler" minWidth="0.0" prefWidth="151.0" text="Fecha de prestamo" />
+                              <TableColumn fx:id="columnFechaDevolucionAlquiler" minWidth="0.0" prefWidth="150.0" text="fecha de devolución" />
+                              <TableColumn fx:id="columnCodigoAlquiler" prefWidth="145.0" text="Codigo del alquiler" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnEliminarAlquiler" layoutX="452.0" layoutY="507.0" mnemonicParsing="false" onAction="#eliminarAlquilerAction" prefHeight="31.0" prefWidth="179.0" text="Eliminar Alquiler" />
+                        <Button fx:id="btnActualizarAlquiler" layoutX="710.0" layoutY="507.0" mnemonicParsing="false" onAction="#actualizarAlquilerAction" prefHeight="31.0" prefWidth="179.0" text="Actualizar Alquiler" />
+                        <Button fx:id="btnLimpiarCamposAlquiler" layoutX="15.0" layoutY="516.0" mnemonicParsing="false" onAction="#limpiarCamposAlquilerAction" prefHeight="31.0" prefWidth="186.0" text="Limpiar campos" />
+                        <Label layoutX="14.0" layoutY="402.0" opacity="0.5" text="Codigo del alquiler" />
+                        <TextField fx:id="txtCodigoAlquiler" layoutX="15.0" layoutY="423.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Venta">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="51.0" opacity="0.5" text="Codigo de venta" />
+                        <TextField fx:id="txtCodigoVenta" layoutX="14.0" layoutY="72.0" />
+                        <Label layoutX="14.0" layoutY="117.0" opacity="0.5" text="Identificación del cliente" />
+                        <TextField fx:id="txtIdentificacionClienteVenta" layoutX="13.0" layoutY="138.0" />
+                        <Label layoutX="15.0" layoutY="190.0" opacity="0.5" text="Identificación del empleado" />
+                        <TextField fx:id="txtIdentificacionEmpleadoVenta" layoutX="13.0" layoutY="211.0" />
+                        <Label layoutX="13.0" layoutY="259.0" opacity="0.5" text="Matricula del vehiculo" />
+                        <TextField fx:id="txtMatriculaVehiculoVenta" layoutX="14.0" layoutY="280.0" />
+                        <Button fx:id="btnCrearVenta" layoutX="16.0" layoutY="345.0" mnemonicParsing="false" onAction="#crearVentaAction" prefHeight="31.0" prefWidth="184.0" text="Crear venta" />
+                        <TableView fx:id="tableListaVentas" layoutX="276.0" layoutY="43.0" prefHeight="367.0" prefWidth="756.0">
+                          <columns>
+                            <TableColumn fx:id="columnIdClienteVenta" prefWidth="175.0" text="Id del cliente" />
+                            <TableColumn fx:id="columnIdEmpleadoVenta" prefWidth="194.0" text="Id del empleado" />
+                              <TableColumn fx:id="columnCodigoVenta" prefWidth="178.0" text="Codigo de venta" />
+                              <TableColumn fx:id="columnMatriculaVehiculoVenta" prefWidth="208.0" text="Matricula del vehiculo" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnEliminarVenta" layoutX="420.0" layoutY="467.0" mnemonicParsing="false" onAction="#eliminarVentaAction" prefHeight="31.0" prefWidth="184.0" text="Eliminar venta" />
+                        <Button fx:id="btnActualizarVenta" layoutX="717.0" layoutY="467.0" mnemonicParsing="false" onAction="#actualizarVentaAction" prefHeight="31.0" prefWidth="184.0" text="Actualizar venta" />
+                        <Button fx:id="btnLimpiarCamposVenta" layoutX="16.0" layoutY="402.0" mnemonicParsing="false" onAction="#limpiarCamposVentaAction" prefHeight="31.0" prefWidth="184.0" text="Limpiar campos" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Compra">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="50.0" opacity="0.45" text="Identificación del cliente" />
+                        <TextField fx:id="txtIdentificacionClienteCompra" layoutX="14.0" layoutY="71.0" />
+                        <Label layoutX="16.0" layoutY="117.0" opacity="0.45" text="Identificación del empleado" />
+                        <TextField fx:id="txtIdentificacionEmpleadoCompra" layoutX="14.0" layoutY="138.0" />
+                        <Label layoutX="16.0" layoutY="182.0" opacity="0.45" text="Codigo de compra" />
+                        <TextField fx:id="txtCodigoCompra" layoutX="16.0" layoutY="203.0" />
+                        <Label layoutX="16.0" layoutY="248.0" opacity="0.45" text="Matricula del vehiculo" />
+                        <TextField fx:id="txtMatriculaVehiculoCompra" layoutX="14.0" layoutY="269.0" />
+                        <Button fx:id="btnCrearCompra" layoutX="16.0" layoutY="330.0" mnemonicParsing="false" onAction="#crearCompraAction" prefHeight="31.0" prefWidth="186.0" text="Crear compra" />
+                        <TableView fx:id="tableListaCompras" layoutX="305.0" layoutY="37.0" prefHeight="363.0" prefWidth="751.0">
+                          <columns>
+                            <TableColumn fx:id="columnIdClienteCompra" prefWidth="170.0" text="Id del cliente" />
+                            <TableColumn fx:id="columnIdEmpleadoCompra" prefWidth="164.0" text="Id del empleado" />
+                              <TableColumn fx:id="columnCodigoCompra" prefWidth="197.0" text="Codigo de compra" />
+                              <TableColumn fx:id="columnMatriculaVehiculoCompra" prefWidth="217.0" text="Matricula del vehiculo" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnActualizarCompra" layoutX="748.0" layoutY="468.0" mnemonicParsing="false" onAction="#actualizarCompraAction" prefHeight="31.0" prefWidth="186.0" text="Actualizar compra" />
+                        <Button fx:id="btnEliminarCompra" layoutX="444.0" layoutY="468.0" mnemonicParsing="false" onAction="#eliminarCompraAction" prefHeight="31.0" prefWidth="186.0" text="Eliminar compra" />
+                        <Button fx:id="btnLimpiarCamposCompra" layoutX="15.0" layoutY="385.0" mnemonicParsing="false" onAction="#limpiarCamposCompraAction" prefHeight="31.0" prefWidth="186.0" text="Limpiar campos" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Clientes">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="31.0" opacity="0.45" text="Nombre" />
+                        <TextField fx:id="txtNombreCliente" layoutX="14.0" layoutY="52.0" />
+                        <Label layoutX="14.0" layoutY="94.0" opacity="0.45" text="Identificación" />
+                        <TextField fx:id="txtIdentificacionCliente" layoutX="14.0" layoutY="115.0" />
+                        <Label layoutX="14.0" layoutY="156.0" opacity="0.45" text="Teléfono" />
+                        <TextField fx:id="txtTelefonoCliente" layoutX="14.0" layoutY="177.0" />
+                        <Label layoutX="13.0" layoutY="224.0" opacity="0.45" text="Correo" />
+                        <TextField fx:id="txtCorreoCliente" layoutX="14.0" layoutY="245.0" />
+                        <Button fx:id="btnCrearCliente" layoutX="15.0" layoutY="324.0" mnemonicParsing="false" onAction="#crearClienteAction" prefHeight="31.0" prefWidth="185.0" text="Crear cliente" />
+                        <Button fx:id="btnEliminarCliente" layoutX="15.0" layoutY="422.0" mnemonicParsing="false" onAction="#eliminarClienteAction" prefHeight="31.0" prefWidth="185.0" text="Eliminar cliente" />
+                        <TableView fx:id="tableListaClientes" layoutX="302.0" layoutY="33.0" prefHeight="404.0" prefWidth="768.0">
+                          <columns>
+                            <TableColumn fx:id="columnNombreCliente" prefWidth="187.0" text="Nombre" />
+                            <TableColumn fx:id="columnIdentificacionCliente" prefWidth="182.0" text="Identificación" />
+                              <TableColumn fx:id="columnTelefonoCliente" prefWidth="215.0" text="Teléfono" />
+                              <TableColumn fx:id="columnCorreoCliente" prefWidth="183.0" text="Correo" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnActualizarCliente" layoutX="15.0" layoutY="472.0" mnemonicParsing="false" onAction="#actualizarClienteAction" prefHeight="31.0" prefWidth="185.0" text="Actualizar cliente" />
+                        <Button fx:id="btnLimpiarCamposCliente" layoutX="14.0" layoutY="372.0" mnemonicParsing="false" onAction="#limpiarCamposClienteAction" prefHeight="31.0" prefWidth="185.0" text="Limpiar campos" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Empleados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="42.0" opacity="0.5" text="Nombre" />
+                        <TextField fx:id="txtNombreEmpleado" layoutX="14.0" layoutY="63.0" />
+                        <Label layoutX="14.0" layoutY="110.0" opacity="0.5" text="Identificación" />
+                        <TextField fx:id="txtIdentificacionEmpleado" layoutX="14.0" layoutY="131.0" />
+                        <Label layoutX="14.0" layoutY="177.0" opacity="0.5" text="Teléfono" />
+                        <TextField fx:id="txtTelefonoEmpleado" layoutX="14.0" layoutY="198.0" />
+                        <Label layoutX="13.0" layoutY="250.0" opacity="0.5" text="Correo" />
+                        <TextField fx:id="txtCorreoEmpleado" layoutX="14.0" layoutY="271.0" />
+                        <Label layoutX="13.0" layoutY="318.0" opacity="0.5" text="Sueldo" />
+                        <TextField fx:id="txtSueldoEmpleado" layoutX="14.0" layoutY="339.0" />
+                        <Label layoutX="13.0" layoutY="386.0" opacity="0.5" text="Contraseña" />
+                        <TextField fx:id="txtContrasenia" layoutX="14.0" layoutY="407.0" />
+                        <Button fx:id="btnCrearEmpleado" layoutX="12.0" layoutY="469.0" mnemonicParsing="false" onAction="#crearEmpleadoAction" prefHeight="31.0" prefWidth="186.0" text="Crear empleado" />
+                        <TableView fx:id="tableListaEmpleados" layoutX="237.0" layoutY="41.0" prefHeight="346.0" prefWidth="853.0">
+                          <columns>
+                            <TableColumn fx:id="columnNombreEmpleado" prefWidth="130.0" text="Nombre" />
+                            <TableColumn fx:id="columnIdentificacionEmpleado" prefWidth="143.0" text="Identificación" />
+                              <TableColumn fx:id="columnTelefonoEmpleado" prefWidth="126.0" text="Teléfono" />
+                              <TableColumn fx:id="columnCorreoEmpleado" prefWidth="165.0" text="Correo" />
+                              <TableColumn fx:id="columnSueldoEmpleado" prefWidth="141.0" text="Sueldo" />
+                              <TableColumn fx:id="columnContraseniaEmpleado" prefWidth="147.0" text="Contraseña" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnLimpiarCamposEmpleado" layoutX="15.0" layoutY="524.0" mnemonicParsing="false" onAction="#limpiarCamposEmpleadoAction" prefHeight="31.0" prefWidth="186.0" text="Limpiar Campos" />
+                        <Button fx:id="btnActualizarEmpleado" layoutX="726.0" layoutY="454.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" prefHeight="31.0" prefWidth="186.0" text="Actualizar empleado" />
+                        <Button fx:id="btnEliminarEmpleado" layoutX="401.0" layoutY="454.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="31.0" prefWidth="186.0" text="Eliminar empleado" />
+                        <Button fx:id="btnReportes" layoutX="574.0" layoutY="509.0" mnemonicParsing="false" onAction="#verReportesAction" prefHeight="31.0" prefWidth="179.0" text="Reportes" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="3.0" prefHeight="45.0" prefWidth="179.0" text="Tu Carro UQ">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
