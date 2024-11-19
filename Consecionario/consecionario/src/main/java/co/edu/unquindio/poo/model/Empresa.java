@@ -868,7 +868,7 @@ public class Empresa {
                 }
             }
         }
-        return true;
+        return false;
     }
 
     /**
@@ -931,7 +931,7 @@ public class Empresa {
                 "2.6 litros", "12345678", TipoDeVehiculo.GASOLINA);
         listaVehiculos.add(vehiculo);
 
-        Empleado empleado = new Empleado("Juan", "123", "12334", "123", "100000", "1234");
+        Empleado empleado = new Empleado("Juan", "123", "12334", "123", "100000", "123");
         listaEmpleados.add(empleado);
 
         Cliente cliente = new Cliente("Pedro", "321", "1234", "1234");

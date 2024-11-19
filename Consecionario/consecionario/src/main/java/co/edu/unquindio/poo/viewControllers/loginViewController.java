@@ -43,15 +43,13 @@ public class loginViewController {
 
         @FXML
         void iniciarSesionAction(ActionEvent event) {
-                String identificacion = txtIdentificacion.getText();
-                String contrasenia = txtContrasenia.getText();
-
-                if (validarDatos(identificacion, contrasenia)) {
-                        boolean existe = loginController.iniciarSesion(identificacion, contrasenia);
-                        if (existe) {
+                boolean validar = validarDatos(txtIdentificacion.getText(), txtContrasenia.getText());
+                if (validar) {
+                        boolean login = loginController.iniciarSesion(txtIdentificacion.getText(), txtContrasenia.getText());
+                        if (login) {
                                 app.openViewPaginaPrincipal();
                         } else {
-                                showAlert("Datos incorrectos", "Verifique los datos ingresados");
+                                showAlert("Error", "Usuario o contraseña incorrectos");
                         }
                 }
         }
